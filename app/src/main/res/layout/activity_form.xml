@@ -1,0 +1,850 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:background="?android:windowBackground"
+    tools:context=".fragment.AssessmentFragment">
+
+
+     <ScrollView
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_weight="1">
+
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+               <!-- TODO: Update blank fragment layout -->
+
+               <LinearLayout
+                   android:id="@+id/row_ll_physical"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="5dp"
+                   android:background="@drawable/square_bg"
+                   android:gravity="center"
+                   android:orientation="horizontal"
+                   android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Physical Location"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/arrow_physical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/expandable_down_arrow" />
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:id="@+id/ll_physical_location"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="5dp"
+                   android:background="@drawable/square_white_bg"
+                   android:orientation="vertical"
+                   android:padding="5dp"
+                   android:visibility="gone">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                         <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="10dp"
+                             android:text="Photograph from outside and inside the premises"
+                             android:textColor="@color/black"
+                             android:textSize="16sp"
+                             android:textStyle="bold" />
+
+                         <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="5dp"
+                             android:text="Note : Pictures from outside, manufactuing site, store house, inventory"
+                             android:textColor="@color/black"
+                             android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/colorPrimaryTransparent"></View>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                         <ImageView
+                             android:id="@+id/image_physical_geotagged"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_gravity="center"
+                             android:layout_marginRight="10dp"
+                             android:src="@mipmap/camera" />
+
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/physical_recycler_view"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/colorPrimaryTransparent"></View>
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:id="@+id/row_ll_basic"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="5dp"
+                   android:background="@drawable/square_bg"
+                   android:gravity="center"
+                   android:orientation="horizontal"
+                   android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Basic Information"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/arrow_expand_Basic_Information"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/expandable_down_arrow" />
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:id="@+id/ll_basic_info"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="5dp"
+                   android:background="@drawable/square_white_bg"
+                   android:orientation="vertical"
+                   android:padding="5dp"
+                   android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                         <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="10dp"
+                             android:text="What is the name of the official taking part in the assessment ?"
+                             android:textColor="@color/black"
+                             android:textSize="16sp"
+                             android:textStyle="bold" />
+
+                         <TextView
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="5dp"
+                             android:text="NOTE : Photo of the official"
+                             android:textColor="@color/black"
+                             android:textSize="16sp" />
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                         <EditText
+                             android:id="@+id/ed_basic_offical"
+                             android:layout_width="0dp"
+                             android:layout_weight="1"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="10dp" />
+
+                         <ImageView
+                             android:id="@+id/sync_basic_offical"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_gravity="center"
+                             android:padding="5dp"
+                             android:layout_marginLeft="5dp"
+                             android:layout_marginRight="5dp"
+                             android:src="@mipmap/sync_data" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/colorPrimaryTransparent"></View>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                         <ImageView
+                             android:id="@+id/image_basic_official"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_gravity="center"
+                             android:layout_marginRight="10dp"
+                             android:src="@mipmap/camera" />
+
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/official_recycler_view"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorPrimaryTransparent"></View>
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                         <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="10dp"
+                             android:text="Designation of the concerned official in the firm?"
+                             android:textColor="@color/black"
+                             android:textSize="16sp"
+                             android:textStyle="bold" />
+
+                         <TextView
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="5dp"
+                             android:text="NOTE : Photo of office ID proof"
+                             android:textColor="@color/black"
+                             android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                         <EditText
+                             android:id="@+id/ed_basic_ID_proof"
+                             android:layout_width="0dp"
+                             android:layout_weight="1"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="10dp" />
+
+                         <ImageView
+                             android:id="@+id/sync_basic_Id_proof"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_gravity="center"
+                             android:padding="5dp"
+                             android:layout_marginLeft="5dp"
+                             android:layout_marginRight="5dp"
+                             android:src="@mipmap/sync_data" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/colorPrimaryTransparent"></View>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                         <ImageView
+                             android:id="@+id/image_id_proof"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_gravity="center"
+                             android:layout_marginRight="10dp"
+                             android:src="@mipmap/camera" />
+
+
+                    </LinearLayout>
+
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/Id_proof_recycler_view"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorPrimaryTransparent"></View>
+               </LinearLayout>
+
+               <LinearLayout
+                   android:id="@+id/row_ll_process_capability"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="5dp"
+                   android:background="@drawable/square_bg"
+                   android:gravity="center"
+                   android:orientation="horizontal"
+                   android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Stores capability"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/arrow_Process_capability"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/expandable_down_arrow" />
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:id="@+id/ll_proess_capability"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="5dp"
+                   android:background="@drawable/square_white_bg"
+                   android:orientation="vertical"
+                   android:padding="5dp"
+                   android:visibility="gone">
+
+// 1
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                         <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="10dp"
+                             android:text="Show the stores physical location with its inward and outwards storage capacity"
+                             android:textColor="@color/black"
+                             android:textSize="16sp"
+                             android:textStyle="bold" />
+
+                         <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="5dp"
+                             android:text="Note : Photograph"
+                             android:textColor="@color/black"
+                             android:visibility="visible"
+                             android:textSize="16sp" />
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/colorPrimaryTransparent"></View>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                         <ImageView
+                             android:id="@+id/image_process_capability"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_gravity="center"
+                             android:layout_marginRight="10dp"
+                             android:src="@mipmap/camera" />
+
+
+                    </LinearLayout>
+
+
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/process_capability_recycler_view"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/colorPrimaryTransparent"></View>
+
+
+               </LinearLayout>
+
+
+               <LinearLayout
+                   android:id="@+id/row_ll_production"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="5dp"
+                   android:background="@drawable/square_bg"
+                   android:gravity="center"
+                   android:orientation="horizontal"
+                   android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Transportation"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/arrow_Production_Capacity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/expandable_down_arrow" />
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:id="@+id/ll_production_capability"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="5dp"
+                   android:background="@drawable/square_white_bg"
+                   android:orientation="vertical"
+                   android:padding="5dp"
+                   android:visibility="gone">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                         <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="10dp"
+                             android:text="Show the machines critical for production for the product"
+                             android:textColor="@color/black"
+                             android:textSize="16sp"
+                             android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/production_capacity_recycler_view"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content" />
+
+
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/colorPrimaryTransparent"></View>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                         <ImageView
+                             android:id="@+id/image_production_capability"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_gravity="center"
+                             android:layout_marginRight="10dp"
+                             android:src="@mipmap/camera" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/colorPrimaryTransparent"></View>
+
+
+               </LinearLayout>
+
+
+               <LinearLayout
+                   android:id="@+id/row_ll_Quality"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="5dp"
+                   android:background="@drawable/square_bg"
+                   android:gravity="center"
+                   android:orientation="horizontal"
+                   android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Safety"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/arrow_expand_Quality"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/expandable_down_arrow" />
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:id="@+id/ll_Quality"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="5dp"
+                   android:background="@drawable/square_white_bg"
+                   android:orientation="vertical"
+                   android:padding="5dp"
+                   android:visibility="gone">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                         <TextView
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="10dp"
+                             android:text="Explain the process for quality assurance? ( Discussion with Quality Manager)"
+                             android:textColor="@color/black"
+                             android:textSize="16sp"
+                             android:textStyle="bold" />
+
+                         <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="5dp"
+                             android:text="Note : Picture of the manager"
+                             android:textColor="@color/black"
+                             android:textSize="16sp" />
+                    </LinearLayout>
+
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/colorPrimaryTransparent"></View>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                         <ImageView
+                             android:id="@+id/image_Quality"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_gravity="center"
+                             android:layout_marginRight="10dp"
+                             android:src="@mipmap/camera" />
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/Quality_recycler_view"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/colorPrimaryTransparent"></View>
+
+
+               </LinearLayout>
+
+
+               <LinearLayout
+                   android:id="@+id/row_ll_suppliers"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="5dp"
+                   android:background="@drawable/square_bg"
+                   android:gravity="center"
+                   android:orientation="horizontal"
+                   android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Suppliers"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/arrow_expand_Suppliers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/expandable_down_arrow" />
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:id="@+id/ll_suppliers"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="5dp"
+                   android:background="@drawable/square_white_bg"
+                   android:orientation="vertical"
+                   android:padding="5dp"
+                   android:visibility="gone">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                         <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="10dp"
+                             android:text="What key aspects are focussed while selecting suppliers?"
+                             android:textColor="@color/black"
+                             android:textSize="16sp"
+                             android:textStyle="bold" />
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                         <EditText
+                             android:id="@+id/edit_text_suppliers"
+                             android:layout_width="0dp"
+                             android:layout_weight="1"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="10dp" />
+
+                         <ImageView
+                             android:id="@+id/sync_suppliers"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_gravity="center"
+                             android:padding="5dp"
+                             android:src="@mipmap/sync_data" />
+
+                    </LinearLayout>
+
+               </LinearLayout>
+
+
+               <LinearLayout
+                   android:id="@+id/row_ll_Transportation"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="5dp"
+                   android:background="@drawable/square_bg"
+                   android:gravity="center"
+                   android:orientation="horizontal"
+                   android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Transaction and Accounting"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/arrow_expand_Transportation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/expandable_down_arrow" />
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:id="@+id/ll_tranportation"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="5dp"
+                   android:background="@drawable/square_white_bg"
+                   android:orientation="vertical"
+                   android:padding="5dp"
+                   android:visibility="gone">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                         <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="10dp"
+                             android:text="Show the transport facility."
+                             android:textColor="@color/black"
+                             android:textSize="16sp"
+                             android:textStyle="bold" />
+
+                         <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="5dp"
+                             android:text="Note : Picture of the facility, any ready shipment (3-4 photos)"
+                             android:textColor="@color/black"
+                             android:textSize="16sp" />
+                    </LinearLayout>
+
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/colorPrimaryTransparent"></View>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                         <ImageView
+                             android:id="@+id/image_tranportation"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_gravity="center"
+                             android:layout_marginRight="10dp"
+                             android:src="@mipmap/camera" />
+
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/Transportation_recycler_view"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/colorPrimaryTransparent"></View>
+
+
+               </LinearLayout>
+
+          </LinearLayout>
+
+     </ScrollView>
+
+     <TextView android:id="@+id/tv_video_switch"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="Assessment Complition"
+         android:textSize="20sp"
+         android:textColor="@color/white"
+         android:layout_gravity="center"
+         android:padding="5dp"
+         android:layout_margin="20dp"
+         android:visibility="gone"
+         android:gravity="center"
+         android:background="@color/login_btn"/>
+
+
+</LinearLayout>

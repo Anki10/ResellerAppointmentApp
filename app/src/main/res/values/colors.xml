@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="edittextColor">#cccccc</color>
+
+    <color name="white">#FFFFFF</color>
+
+    <color name="publisher_border_color">#FFFFFF</color>
+
+    <color name="colorPrimaryTransparent">#335f50e1</color>
+
+    <color name="login_btn">#FFD810</color>
+
+    <color name="black">#000000</color>
+
+    <color name="square_border">#A7E2E4</color>
+    <color name="square_background">#EAF6F6</color>
+
+    <color name="bag_color">#D4D8DC</color>
+
+    <color name="toolbar_color">#11C5BC</color>
+
+    <color name="custom_dialog">#99000000</color>
+
+    <color name="alertdialog_header_color">#f3f3f5</color>
+
+    <color name="light_black">#4E4F55</color>
+
+    <color name="transparent">#00000000</color>
+
+    <color name="dialog_text_color">#01adb2</color>
+
+    <color name="dialog_answer_color">#14BA91</color>
+    <color name="dialog_reject_color">#FF5757</color>
+</resources>
