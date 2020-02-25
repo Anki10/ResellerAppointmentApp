@@ -3,6 +3,17 @@ package com.anova.reseller_appointment.pojo;
 public class CallDisconnectRequest {
 
     private String session_id;
+    private String type;
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+
 
     public String getSession_id() {
         return session_id;

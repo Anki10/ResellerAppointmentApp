@@ -6,6 +6,17 @@ public class LoginResponse {
     private Boolean success;
     private String token;
     private String user_name;
+    private String seller_assessed_as;
+
+    public String getSeller_assessed_as() {
+        return seller_assessed_as;
+    }
+
+    public void setSeller_assessed_as(String seller_assessed_as) {
+        this.seller_assessed_as = seller_assessed_as;
+    }
+
+
 
     public String getMessage() {
         return message;

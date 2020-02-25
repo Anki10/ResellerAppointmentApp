@@ -10,10 +10,11 @@ public class ApiUtils {
 
 
   //    public static final String BASE_URL = "https://assessment.qcin.org/opentok/"; // 13.233.90.40:5002
-      public static final String BASE_URL = "http://192.168.15.161:5000/opentok/"; // 13.233.90.40:5002
+   //   public static final String BASE_URL = "http://192.168.15.161:5000/opentok/"; // 13.233.90.40:5002
+      public static final String BASE_URL = "http://13.127.83.224:5000/opentok/"; // 13.233.90.40:5002
 
 
-    // public static final String BASE_URL = "http://192.168.43.196:59017/api/";
+    // public static final String BASE_URL = "http://13.127.83.224:59017/api/";
 
     public static APIService getAPIService() {
 

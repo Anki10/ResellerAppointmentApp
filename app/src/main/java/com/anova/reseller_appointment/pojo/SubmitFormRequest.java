@@ -7,6 +7,15 @@ public class SubmitFormRequest {
     private String form_id;
     private Boolean is_submit;
     private String data_id;
+    private String type;
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
 
     public String getData_id() {
         return data_id;

@@ -174,8 +174,11 @@ public class DataGetActivity extends BaseActivity implements View.OnClickListene
         request.setCalling_user_id(userlist.get(position).getUser_id());
         request.setChat_time(userlist.get(position).getChat_time());
         request.setForm_id(userlist.get(position).getForm_id());
+        request.setType(getFromPrefs("seller_assessed_as"));
 
         saveIntoPrefs("form_id",userlist.get(position).getForm_id());
+
+
 
 
         mAPIService.PostUserCall(getFromPrefs("token_id"),request).enqueue(new Callback<UserCallResponse>() {
@@ -341,6 +344,7 @@ public class DataGetActivity extends BaseActivity implements View.OnClickListene
         request.setSession_id(session_id);
         request.setEpoch(chat_time);
         request.setForm_id(form_id);
+        request.setType(getFromPrefs("seller_assessed_as"));
 
 
         mAPIService.PostCallDisconnect(getFromPrefs("token_id"),request).enqueue(new Callback<CallDisconnectResponse>() {

@@ -4,6 +4,16 @@ public class PostVideoRequest {
 
     private String calling_user_id;
 
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    private String type;
+
     public String getCalling_user_id() {
         return calling_user_id;
     }

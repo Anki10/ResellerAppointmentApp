@@ -1161,6 +1161,7 @@ public class AssessmentFragment extends BaseFragment implements ListAdapterListe
                 request.setFile_data(image_store);
                 request.setQuestion_id(Question_id);
                 request.setIs_submit(false);
+                request.setType(getFromPrefs("seller_assessed_as"));
 
          /*       getActivity().runOnUiThread(new Runnable() {
                     public void run() {
@@ -1366,6 +1367,7 @@ public class AssessmentFragment extends BaseFragment implements ListAdapterListe
                 request.setFile_data(edit_text);
                 request.setQuestion_id(Question_id);
                 request.setIs_submit(false);
+                request.setType(getFromPrefs("seller_assessed_as"));
 
          /*       getActivity().runOnUiThread(new Runnable() {
                     public void run() {
@@ -1426,6 +1428,7 @@ public class AssessmentFragment extends BaseFragment implements ListAdapterListe
                 radio_request.setFile_data(file_type);
                 radio_request.setQuestion_id(Question_id);
                 radio_request.setIs_submit(false);
+                radio_request.setType(getFromPrefs("seller_assessed_as"));
 
               /*  getActivity().runOnUiThread(new Runnable() {
                     public void run() {
@@ -1581,6 +1584,7 @@ public class AssessmentFragment extends BaseFragment implements ListAdapterListe
     private void getVendorDetails(final String from,final int pos){
         VendorDetailsRequestPojo requestPojo = new VendorDetailsRequestPojo();
         requestPojo.setForm_id(getFromPrefs("form_id"));
+        requestPojo.setType(getFromPrefs("seller_assessed_as"));
         mAPIService.GetVendorDetails("application/json",requestPojo).enqueue(new Callback<VendorDetailsResponsePojo>() {
             @Override
             public void onResponse(Call<VendorDetailsResponsePojo> call, Response<VendorDetailsResponsePojo> response) {

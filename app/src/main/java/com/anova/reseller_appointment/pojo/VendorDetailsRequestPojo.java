@@ -11,4 +11,13 @@ public class VendorDetailsRequestPojo {
     }
 
     private String form_id;
+    private String type;
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
 }

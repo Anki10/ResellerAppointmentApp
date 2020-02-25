@@ -109,6 +109,8 @@ public class LoginActivity extends AppCompatActivity implements ActivityCompat.O
 
                        saveIntoPrefs("token_id",response.body().getToken());
 
+                       saveIntoPrefs("seller_assessed_as",response.body().getSeller_assessed_as());
+
                         Intent intent = new Intent(LoginActivity.this, DataGetActivity.class);
                         startActivity(intent);
 
