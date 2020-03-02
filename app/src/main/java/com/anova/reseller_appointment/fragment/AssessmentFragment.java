@@ -79,138 +79,137 @@ public class AssessmentFragment extends BaseFragment implements ListAdapterListe
     // Physical Location
 
     LinearLayout row_ll_physical;
-
     ImageView arrow_physical;
-
     LinearLayout ll_physical_location;
-
     ImageView image_physical_geotagged;
-
-
     ImageView camera_view;
-
 
     // Basic Information
 
     LinearLayout row_ll_basic;
-
     ImageView arrow_expand_Basic_Information;
-
     LinearLayout ll_basic_info;
-
     EditText ed_basic_offical;
-
     ImageView image_basic_official;
-
     ImageView sync_basic_offical;
-
-
     EditText ed_basic_ID_proof;
-
     ImageView image_id_proof;
-
     ImageView sync_basic_Id_proof;
 
 
-    // Process capability
+    // Stores capability
 
-    LinearLayout row_ll_process_capability;
+    LinearLayout row_ll_Stores_capability;
 
-    ImageView arrow_Process_capability;
+    ImageView arrow_Stores_capability;
 
-    LinearLayout ll_proess_capability;
+    LinearLayout ll_Stores_capability;
 
-    ImageView image_process_capability;
+    EditText ed_physical_location;
 
+    ImageView image_physical_location;
+    ImageView sync_physical_location;
 
+    EditText ed_inventory_mngmnt;
 
-   // Production Capacity
+    ImageView image_inventory_mngmnt;
 
-    LinearLayout row_ll_production;
-
-    ImageView arrow_Production_Capacity;
-
-    LinearLayout ll_production_capability;
-
-    ImageView image_production_capability;
+    ImageView sync_inventory_mngmnt;
 
 
+    EditText ed_brand_outlet;
 
-    //  Quality
+    ImageView image_brand_outlet;
 
-    LinearLayout row_ll_Quality;
-
-    ImageView arrow_expand_Quality;
-
-    LinearLayout ll_Quality;
-
-    ImageView image_Quality;
-
-
-
-    // Suppliers
-
-    LinearLayout row_ll_suppliers;
-
-    ImageView arrow_expand_Suppliers;
-
-    LinearLayout ll_suppliers;
-
-    EditText edit_text_suppliers;
-
-    ImageView sync_suppliers;
+    ImageView sync_brand_outlet;
 
     // Transportation
 
-
     LinearLayout row_ll_Transportation;
 
-    ImageView arrow_expand_Transportation;
+    ImageView arrow_Transportation;
 
-    LinearLayout ll_tranportation;
+    LinearLayout ll_Transportation;
 
-    ImageView image_tranportation;
+    ImageView image_Transportation;
 
-
-    // Safety
+    //  safety
 
     LinearLayout row_ll_safety;
 
-    ImageView arrow_expand_Safety;
+    ImageView arrow_expand_safety;
 
     LinearLayout ll_safety;
+    EditText ed_signs_labels;
+    RadioButton signs_labels_yes;
+    RadioButton signs_labels_no;
+    ImageView image_signs_labels;
+    ImageView sync_signs_labels;
+    EditText ed_inhouse_ppe;
+    RadioButton inhouse_ppe_yes;
+    RadioButton inhouse_ppe_no;
+    ImageView image_inhouse_ppe;
+
+    ImageView sync_inhouse_ppe;
+
+    EditText ed_fire_safety;
+    RadioButton fire_safety_yes;
+    RadioButton fire_safety_no;
+    ImageView image_fire_safety;
+    ImageView sync_fire_safety;
 
 
-    RadioButton signage_yes;
 
-    RadioButton signage_no;
+    // Transaction & Accounting          //pri1
 
-    ImageView image_safety_signage;
+    LinearLayout row_ll_transaction_accounting;
 
-    RadioButton equipment_yes;
+    ImageView arrow_expand_transaction_accounting;
 
-    RadioButton equipment_no;
+    LinearLayout ll_transaction_accounting;
 
-    ImageView image_safety_equipment;
+    EditText edit_text_brand_outlet;
+
+    RadioButton brand_outlet_yes;
+    RadioButton brand_outlet_no;
+
+    ImageView image_brand_outlet;
+    ImageView sync_brand_outlet;
+
+    EditText edit_text_availability_products;
+
+    RadioButton availability_products_yes;
+    RadioButton availability_products_no;
+
+    ImageView image_available_products;
+    ImageView sync_available_products;
+
+    EditText edit_text_transactions_notes;
+
+    RadioButton transactions_notes_yes;
+    RadioButton transactions_notes_no;
+
+    ImageView image_transactions_notes;
+    ImageView sync_transactions_notes;
 
 
-    // Research and Development
+    EditText edit_text_notification_warning;
 
-    LinearLayout row_ll_development;
+    RadioButton notification_warning_yes;
+    RadioButton notification_warning_no;
 
-    ImageView arrow_expand_Development;
+    ImageView image_notification_warning;
+    ImageView sync_notification_warning;
 
-    LinearLayout ll_development;
+    EditText edit_text_tracking_recording;
 
-    ImageView image_development_facility;
+    RadioButton tracking_recording_yes;
+    RadioButton tracking_recording_no;
 
-    ImageView image_development_obtained;
+    ImageView image_tracking_recording;
+    ImageView sync_tracking_recording;
 
-    ImageView image_development_prototype;
-
-    ImageView camera_flip_custom;
-
-    // Additional image
+// Additional image
 
     LinearLayout row_ll_additional_image;
 
@@ -223,24 +222,25 @@ public class AssessmentFragment extends BaseFragment implements ListAdapterListe
     LinearLayout ll_additional_image;
 
 
+//pink1
 
     RecyclerView physical_recycler_view;
     RecyclerView official_recycler_view;
     RecyclerView Id_proof_recycler_view;
-    RecyclerView process_capability_recycler_view;
-    RecyclerView production_capacity_recycler_view;
-    RecyclerView Quality_recycler_view;
-    RecyclerView Transportation_recycler_view;
-    RecyclerView safety_signage_recycler_view;
-    RecyclerView safety_equipment_recycler_view;
-    RecyclerView development_facility_recycler_view;
-    RecyclerView development_obtained_recycler_view;
-    RecyclerView development_prototype_recycler_view;
-
+    RecyclerView physical_location_recycler_view;
+    RecyclerView inventory_mngmnt_recycler_view;
+    RecyclerView brand_outlet_recycler_view;
+    RecyclerView transport_recycler_view;
+    RecyclerView signs_labels_recycler_view;
+    RecyclerView inhouse_ppe_recycler_view;
+    RecyclerView fire_safety_recycler_view;
+    RecyclerView brand_outlet_recycler_view;
+    RecyclerView availability_products_recycler_view;
+    RecyclerView transaction_notes_recycler_view;
+    RecyclerView notification_warning_recycler_view;
+    RecyclerView tracking_recording_recycler_view;
 
     private Dialog dialogLogout;
-
-
     private View view;
 
     private APIService mAPIService;
@@ -249,15 +249,13 @@ public class AssessmentFragment extends BaseFragment implements ListAdapterListe
     Process_capability_status = false,Production_Capacity_status = false,Quality_status = false,
             Transportation_status = false,Safety_status = false,Research_Development_status = false,additional_status = false;
 
-    private ArrayList<Physical_Location_List>suppliers_list;
+
     private ArrayList<Basic_Information_list_Pojo>physical_location_list;
     private ArrayList<Basic_Information_list_Pojo>basic_info_list;
-    private ArrayList<Basic_Information_list_Pojo>process_capability_list;
-    private ArrayList<Basic_Information_list_Pojo>product_capability_list;
-    private ArrayList<Basic_Information_list_Pojo>Quality_list;
-    private ArrayList<Basic_Information_list_Pojo>transportation_list;
+    private ArrayList<Basic_Information_list_Pojo>Stores_capability_list;
     private ArrayList<Basic_Information_list_Pojo>safety_list;
-    private ArrayList<Basic_Information_list_Pojo>development_list;
+    private ArrayList<Basic_Information_list_Pojo>transportation_list;
+    private ArrayList<Basic_Information_list_Pojo>Transaction_accounting_list;
     private ArrayList<Basic_Information_list_Pojo>additional_list;
 
 
@@ -316,30 +314,35 @@ public class AssessmentFragment extends BaseFragment implements ListAdapterListe
     private ImageShowAdapter physical_image_adapter;
     private ImageShowAdapter basic_info_adapter;
     private ImageShowAdapter basic_ID_adapter;
-    private ImageShowAdapter process_capability_adapter;
-    private ImageShowAdapter production_capacity_adapter;
-    private ImageShowAdapter Quality_adapter;
+    private ImageShowAdapter physical_location_adapter;
+    private ImageShowAdapter inventory_mngmnt_adapter;
+    private ImageShowAdapter brand_outlet_adapter;
     private ImageShowAdapter Transportation_adapter;
-    private ImageShowAdapter safety_signage_adapter;
-    private ImageShowAdapter safety_equipment_adapter;
-    private ImageShowAdapter development_facility_adapter;
-    private ImageShowAdapter development_obtained_adapter;
-    private ImageShowAdapter development_prototype_adapter;
+    private ImageShowAdapter signs_labels_adapter;
+    private ImageShowAdapter inhouse_ppe_adapter;
+    private ImageShowAdapter fire_safety_adapter;
+    private ImageShowAdapter brand_outlet_adapter;
+    private ImageShowAdapter transaction_notes_adapter;
+    private ImageShowAdapter notification_warning_adapter;
+    private ImageShowAdapter tracking_recording_adapter;
     private ImageShowAdapter additional_adapter;
 
 
     private ArrayList<ImageUploadPojo> image_list;
     private ArrayList<ImageUploadPojo> image_official_list;
     private ArrayList<ImageUploadPojo> image_Id_proof_list;
-    private ArrayList<ImageUploadPojo> image_process_capability_list;
-    private ArrayList<ImageUploadPojo> image_production_capacity_list;
-    private ArrayList<ImageUploadPojo> image_Quality_list;
+    private ArrayList<ImageUploadPojo> image_physical_location_list;
+    private ArrayList<ImageUploadPojo> image_inventory_mngmnt_list;
+    private ArrayList<ImageUploadPojo> image_brand_outlet_list;
     private ArrayList<ImageUploadPojo> image_Transportation_list;
-    private ArrayList<ImageUploadPojo> image_safety_signage_list;
-    private ArrayList<ImageUploadPojo> image_safety_equipment_list;
-    private ArrayList<ImageUploadPojo> image_development_facility_list;
-    private ArrayList<ImageUploadPojo> image_development_obtained_list;
-    private ArrayList<ImageUploadPojo> image_development_prototype_list;
+    private ArrayList<ImageUploadPojo> image_signs_labels_list;
+    private ArrayList<ImageUploadPojo> image_inhouse_ppe_list;
+    private ArrayList<ImageUploadPojo> image_fire_safety_list;
+    private ArrayList<ImageUploadPojo> image_brand_outlet_list;
+    private ArrayList<ImageUploadPojo> image_availability_products_list;
+    private ArrayList<ImageUploadPojo> image_transactions_notes_list;
+    private ArrayList<ImageUploadPojo> image_notification_warning_list;
+    private ArrayList<ImageUploadPojo> image_tracking_recording_list;
     private ArrayList<ImageUploadPojo> image_additional_list;
 
     private Boolean camera_flip_status = false;
@@ -387,61 +390,83 @@ public class AssessmentFragment extends BaseFragment implements ListAdapterListe
         ed_basic_offical = (EditText) view.findViewById(R.id.ed_basic_offical);
         ed_basic_ID_proof = (EditText) view.findViewById(R.id.ed_basic_ID_proof);
 
-        row_ll_process_capability = (LinearLayout) view.findViewById(R.id.row_ll_process_capability);
-        ll_proess_capability = (LinearLayout) view.findViewById(R.id.ll_proess_capability);
-
-        arrow_Process_capability = (ImageView) view.findViewById(R.id.arrow_Process_capability);
-        image_process_capability = (ImageView) view.findViewById(R.id.image_process_capability);
+        row_ll_Stores_capability = (LinearLayout) view.findViewById(R.id.row_ll_Stores_capability);
+        ll_Stores_capability = (LinearLayout) view.findViewById(R.id.ll_Stores_capability);
 
 
-        row_ll_production = (LinearLayout) view.findViewById(R.id.row_ll_production);
-        ll_production_capability = (LinearLayout) view.findViewById(R.id.ll_production_capability);
+        arrow_Stores_capability = (ImageView) view.findViewById(R.id.arrow_Stores_capability);
+        image_physical_location = (ImageView) view.findViewById(R.id.image_physical_location);
+        image_inventory_mngmnt = (ImageView) view.findViewById(R.id.image_inventory_mngmnt);
+        image_brand_outlet = (ImageView) view.findViewById(R.id.image_brand_outlet);
 
-        arrow_Production_Capacity = (ImageView) view.findViewById(R.id.arrow_Production_Capacity);
-        image_production_capability = (ImageView) view.findViewById(R.id.image_production_capability);
+        ed_brand_outlet= (EditText) view.findViewById(R.id.ed_brand_outlet);
+        ed_physical_location= (EditText) view.findViewById(R.id.ed_physical_location);
+        ed_inventory_mngmnt= (EditText) view.findViewById(R.id.ed_inventory_mngmnt);
+
+        sync_physical_location= (ImageView) view.findViewById(R.id.sync_physical_location);
+        sync_inventory_mngmnt= (ImageView) view.findViewById(R.id.sync_inventory_mngmnt);
+        sync_brand_outlet= (ImageView) view.findViewById(R.id.sync_brand_outlet);
+
+
 
         tv_video_switch = (TextView) view.findViewById(R.id.tv_video_switch);
 
-        row_ll_Quality = (LinearLayout) view.findViewById(R.id.row_ll_Quality);
-        ll_Quality = (LinearLayout) view.findViewById(R.id.ll_Quality);
-
-        arrow_expand_Quality = (ImageView) view.findViewById(R.id.arrow_expand_Quality);
-        image_Quality = (ImageView) view.findViewById(R.id.image_Quality);
-
-        row_ll_suppliers = (LinearLayout) view.findViewById(R.id.row_ll_suppliers);
-        ll_suppliers = (LinearLayout) view.findViewById(R.id.ll_suppliers);
-
-        arrow_expand_Suppliers = (ImageView) view.findViewById(R.id.arrow_expand_Suppliers);
-        edit_text_suppliers = (EditText) view.findViewById(R.id.edit_text_suppliers);
 
         row_ll_Transportation = (LinearLayout) view.findViewById(R.id.row_ll_Transportation);
-        ll_tranportation = (LinearLayout) view.findViewById(R.id.ll_tranportation);
+        ll_Transportation = (LinearLayout) view.findViewById(R.id.ll_tranportation);
 
-        arrow_expand_Transportation = (ImageView) view.findViewById(R.id.arrow_expand_Transportation);
-        image_tranportation = (ImageView) view.findViewById(R.id.image_tranportation);
+        arrow_Transportation = (ImageView) view.findViewById(R.id.arrow_expand_Transportation);
+        image_Transportation = (ImageView) view.findViewById(R.id.image_tranportation);
 
         row_ll_safety = (LinearLayout) view.findViewById(R.id.row_ll_safety);
         ll_safety = (LinearLayout) view.findViewById(R.id.ll_safety);
 
-        arrow_expand_Safety = (ImageView) view.findViewById(R.id.arrow_expand_Safety);
+        arrow_expand_safety = (ImageView) view.findViewById(R.id.arrow_expand_Safety);
 
-        signage_yes = (RadioButton) view.findViewById(R.id.signage_yes);
-        signage_no = (RadioButton) view.findViewById(R.id.signage_no);
+        signs_labels_yes = (RadioButton) view.findViewById(R.id.signs_labels_yes);
+        signs_labels_no = (RadioButton) view.findViewById(R.id.signs_labels_yes);
 
-        image_safety_signage = (ImageView) view.findViewById(R.id.image_safety_signage);
+        image_signs_labels = (ImageView) view.findViewById(R.id.image_signs_labels);
 
-        equipment_yes = (RadioButton) view.findViewById(R.id.equipment_yes);
-        equipment_no = (RadioButton) view.findViewById(R.id.equipment_no);
+        inhouse_ppe_yes = (RadioButton) view.findViewById(R.id.inhouse_ppe_yes);
+        inhouse_ppe_no = (RadioButton) view.findViewById(R.id.inhouse_ppe_no);
 
-        image_safety_equipment = (ImageView) view.findViewById(R.id.image_safety_equipment);
+        image_inhouse_ppe = (ImageView) view.findViewById(R.id.image_inhouse_ppe);
 
-        row_ll_development = (LinearLayout) view.findViewById(R.id.row_ll_development);
-        ll_development  = (LinearLayout) view.findViewById(R.id.ll_development);
+        fire_safety_yes = (RadioButton) view.findViewById(R.id.fire_safety_yes);
+        fire_safety_no = (RadioButton) view.findViewById(R.id.fire_safety_no);
 
-        arrow_expand_Development = (ImageView)view.findViewById(R.id.arrow_expand_Development);
-        image_development_facility = (ImageView) view.findViewById(R.id.image_development_facility);
-        image_development_obtained = (ImageView) view.findViewById(R.id.image_development_obtained);
-        image_development_prototype = (ImageView)view.findViewById(R.id.image_development_prototype);
+        image_fire_safety = (ImageView) view.findViewById(R.id.image_fire_safety);
+
+
+
+
+        row_ll_transaction_accounting = (LinearLayout) view.findViewById(R.id.row_ll_transaction_accounting);
+        ll_transaction_accounting = (LinearLayout) view.findViewById(R.id.ll_transaction_accounting);
+
+        arrow_expand_transaction_accounting = (ImageView) view.findViewById(R.id.arrow_expand_transaction_accounting);
+
+        brand_outlet_yes= (RadioButton) view.findViewById(R.id.brand_outlet_yes);
+        brand_outlet_no= (RadioButton) view.findViewById(R.id.brand_outlet_no);
+        image_brand_outlet= (ImageView) view.findViewById(R.id.image_brand_outlet);
+
+        availability_products_yes= (RadioButton) view.findViewById(R.id.availability_products_yes);
+        availability_products_no= (RadioButton) view.findViewById(R.id.availability_products_no);
+        image_available_products =(ImageView) view.findViewById(R.id.image_available_products);
+
+
+        transactions_notes_yes= (RadioButton) view.findViewById(R.id.transactions_notes_yes);
+        transactions_notes_no= (RadioButton) view.findViewById(R.id.transactions_notes_no);
+        image_transactions_notes =(ImageView) view.findViewById(R.id.image_available_products);
+
+
+        notification_warning_yes= (RadioButton) view.findViewById(R.id.notification_warning_yes);
+        notification_warning_no= (RadioButton) view.findViewById(R.id.notification_warning_no);
+        image_notification_warning=(ImageView) view.findViewById(R.id.image_notification_warning);
+
+        tracking_recording_yes= (RadioButton) view.findViewById(R.id.tracking_recording_yes);
+        tracking_recording_no= (RadioButton) view.findViewById(R.id.tracking_recording_no);
+        image_tracking_recording=(ImageView) view.findViewById(R.id.image_tracking_recording);
 
         row_ll_additional_image = (LinearLayout) view.findViewById(R.id.row_ll_additional_image);
         arrow_additional_image = (ImageView) view.findViewById(R.id.arrow_additional_image);
@@ -451,19 +476,24 @@ public class AssessmentFragment extends BaseFragment implements ListAdapterListe
 
 
 
-
+//pink3
         physical_recycler_view = (RecyclerView) view.findViewById(R.id.physical_recycler_view);
         official_recycler_view = (RecyclerView) view.findViewById(R.id.official_recycler_view);
         Id_proof_recycler_view = (RecyclerView) view.findViewById(R.id.Id_proof_recycler_view);
-        process_capability_recycler_view = (RecyclerView) view.findViewById(R.id.process_capability_recycler_view);
-        production_capacity_recycler_view = (RecyclerView) view.findViewById(R.id.production_capacity_recycler_view);
-        Quality_recycler_view = (RecyclerView) view.findViewById(R.id.Quality_recycler_view);
-        Transportation_recycler_view = (RecyclerView) view.findViewById(R.id.Transportation_recycler_view);
-        safety_signage_recycler_view = (RecyclerView) view.findViewById(R.id.safety_signage_recycler_view);
-        safety_equipment_recycler_view = (RecyclerView) view.findViewById(R.id.safety_equipment_recycler_view);
-        development_facility_recycler_view = (RecyclerView) view.findViewById(R.id.development_facility_recycler_view);
-        development_obtained_recycler_view = (RecyclerView) view.findViewById(R.id.development_obtained_recycler_view);
-        development_prototype_recycler_view = (RecyclerView) view.findViewById(R.id.development_prototype_recycler_view);
+        physical_location_recycler_view = (RecyclerView) view.findViewById(R.id.physical_location_recycler_view);
+        inventory_mngmnt_recycler_view = (RecyclerView) view.findViewById(R.id.inventory_mngmnt_recycler_view);
+        brand_outlet_recycler_view = (RecyclerView) view.findViewById(R.id.brand_outlet_recycler_view);
+        transport_recycler_view = (RecyclerView) view.findViewById(R.id.transport_recycler_view);
+        signs_labels_recycler_view = (RecyclerView) view.findViewById(R.id.signs_labels_recycler_view);
+        inhouse_ppe_recycler_view = (RecyclerView) view.findViewById(R.id.inhouse_ppe_recycler_view);
+        fire_safety_recycler_view = (RecyclerView) view.findViewById(R.id.fire_safety_recycler_view);
+        brand_outlet_recycler_view = (RecyclerView) view.findViewById(R.id.brand_outlet_recycler_view);
+        availability_products_recycler_view = (RecyclerView) view.findViewById(R.id.availability_products_recycler_view);
+        transaction_notes_recycler_view = (RecyclerView) view.findViewById(R.id.transaction_notes_recycler_view);
+        notification_warning_recycler_view = (RecyclerView) view.findViewById(R.id.notification_warning_recycler_view);
+        tracking_recording_recycler_view = (RecyclerView) view.findViewById(R.id.tracking_recording_recycler_view);
+
+
 
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getActivity().getApplicationContext(),4);
         physical_recycler_view.setLayoutManager(gridLayoutManager);
@@ -472,23 +502,30 @@ public class AssessmentFragment extends BaseFragment implements ListAdapterListe
         GridLayoutManager gridLayoutManager_ID_proof = new GridLayoutManager(getActivity().getApplicationContext(),4);
         Id_proof_recycler_view.setLayoutManager(gridLayoutManager_ID_proof);
         GridLayoutManager gridLayoutManager_process_capability = new GridLayoutManager(getActivity().getApplicationContext(),4);
-        process_capability_recycler_view.setLayoutManager(gridLayoutManager_process_capability);
+        physical_location_recycler_view.setLayoutManager(gridLayoutManager_physical_location);
         GridLayoutManager gridLayoutManager_production_capacity = new GridLayoutManager(getActivity().getApplicationContext(),4);
-        production_capacity_recycler_view.setLayoutManager(gridLayoutManager_production_capacity);
+        inventory_mngmnt_recycler_view.setLayoutManager(gridLayoutManager_inventory_mngmnt);
         GridLayoutManager gridLayoutManager_Quality = new GridLayoutManager(getActivity().getApplicationContext(),4);
-        Quality_recycler_view.setLayoutManager(gridLayoutManager_Quality);
+        brand_outlet_recycler_view.setLayoutManager(gridLayoutManager_brand_outlet);
         GridLayoutManager gridLayoutManager_Transportation= new GridLayoutManager(getActivity().getApplicationContext(),4);
-        Transportation_recycler_view.setLayoutManager(gridLayoutManager_Transportation);
+        transport_recycler_view.setLayoutManager(gridLayoutManager_Transport);
         GridLayoutManager gridLayoutManager_safety_signage = new GridLayoutManager(getActivity().getApplicationContext(),4);
-        safety_signage_recycler_view.setLayoutManager(gridLayoutManager_safety_signage);
+        signs_labels_recycler_view.setLayoutManager(gridLayoutManager_signs_labels);
         GridLayoutManager gridLayoutManager_safety_equipment = new GridLayoutManager(getActivity().getApplicationContext(),4);
-        safety_equipment_recycler_view.setLayoutManager(gridLayoutManager_safety_equipment);
+        inhouse_ppe_recycler_view.setLayoutManager(gridLayoutManager_inhouse_ppe);
         GridLayoutManager gridLayoutManager_development_facility = new GridLayoutManager(getActivity().getApplicationContext(),4);
-        development_facility_recycler_view.setLayoutManager(gridLayoutManager_development_facility);
+        fire_safety_recycler_view.setLayoutManager(gridLayoutManager_fire_safety);
         GridLayoutManager gridLayoutManager_development_obtained = new GridLayoutManager(getActivity().getApplicationContext(),4);
-        development_obtained_recycler_view.setLayoutManager(gridLayoutManager_development_obtained);
+        brand_outlet_recycler_view.setLayoutManager(gridLayoutManager_brand_outlet);
         GridLayoutManager gridLayoutManager_development_prototype = new GridLayoutManager(getActivity().getApplicationContext(),4);
-        development_prototype_recycler_view.setLayoutManager(gridLayoutManager_development_prototype);
+        availability_products_recycler_view.setLayoutManager(gridLayoutManager_availability_products);
+        GridLayoutManager gridLayoutManager_development_prototype = new GridLayoutManager(getActivity().getApplicationContext(),4);
+        transaction_notes_recycler_view.setLayoutManager(gridLayoutManager_transaction_notes);
+        GridLayoutManager gridLayoutManager_development_prototype = new GridLayoutManager(getActivity().getApplicationContext(),4);
+        notification_warning_recycler_view.setLayoutManager(gridLayoutManager_notification_waring);
+
+        GridLayoutManager gridLayoutManager_development_prototype = new GridLayoutManager(getActivity().getApplicationContext(),4);
+        tracking_recording_recycler_view.setLayoutManager(gridLayoutManager_tracking_recording);
 
         GridLayoutManager gridLayoutManager_additional_image = new GridLayoutManager(getActivity().getApplicationContext(),4);
         development_additional.setLayoutManager(gridLayoutManager_additional_image);
@@ -496,54 +533,85 @@ public class AssessmentFragment extends BaseFragment implements ListAdapterListe
         image_list = new ArrayList<>();
         image_official_list = new ArrayList<>();
         image_Id_proof_list = new ArrayList<>();
-        image_process_capability_list = new ArrayList<>();
-        image_production_capacity_list = new ArrayList<>();
-        image_Quality_list = new ArrayList<>();
+        image_physical_location_list = new ArrayList<>();
+        image_inventory_mngmnt_list = new ArrayList<>();
+        image_brand_outlet_list = new ArrayList<>();
         image_Transportation_list = new ArrayList<>();
-        image_safety_signage_list = new ArrayList<>();
-        image_safety_equipment_list = new ArrayList<>();
-        image_development_facility_list = new ArrayList<>();
-        image_development_obtained_list = new ArrayList<>();
-        image_development_prototype_list = new ArrayList<>();
+        image_signs_labels_list = new ArrayList<>();
+        image_inhouse_ppe_list = new ArrayList<>();
+        image_fire_safety_list= new ArrayList<>();
+        image_brand_outlet_list = new ArrayList<>();
+        image_transactions_notes_list = new ArrayList<>();
+        image_notification_warning_list= new ArrayList<>();
+        image_tracking_recording_list= new ArrayList<>();
         image_additional_list = new ArrayList<>();
 
 
-        sync_suppliers = (ImageView) view.findViewById(R.id.sync_suppliers);
-
+        sync_safety = (ImageView) view.findViewById(R.id.sync_safety);
+        sync_transaction_accounting=(ImageView) view.findViewById(R.id.sync_transaction_accounting);
         radioGroup = (RadioGroup) view.findViewById(R.id.radio_signage);
 
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
         {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                // checkedId is the RadioButton selected
+                // checkedId is the RadioButton selected                       //pink4
 
                 switch(checkedId) {
-                    case R.id.signage_yes:
+                    case R.id.signs_labels_yes:
                         PostFormRadioData(true,safety_list.get(0).getId(),"saftey_radio");
                         break;
-                    case R.id.signage_no:
+                    case R.id.signs_labels_no:
                         PostFormRadioData(false,safety_list.get(0).getId(),"saftey_radio");
                         break;
                 }
             }
         });
 
-        radio_equipment = (RadioGroup) view.findViewById(R.id.radio_equipment);
+        radio_inhouse = (RadioGroup) view.findViewById(R.id.radio_inhouse);
 
-        radio_equipment.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        radio_inhouse.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 switch(checkedId) {
-                    case R.id.equipment_yes:
+                    case R.id.inhouse_ppe_yes:
                         PostFormRadioData(true,safety_list.get(1).getId(),"saftey_radio_2");
                         break;
-                    case R.id.equipment_no:
+                    case R.id.inhouse_ppe_no:
                         PostFormRadioData(false,safety_list.get(1).getId(),"saftey_radio_2");
                         break;
                 }
             }
         });
+        radio_fire_safety = (RadioGroup) view.findViewById(R.id.radio_fire_safety);
 
+        radio_fire_safety.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                switch(checkedId) {
+                    case R.id.fire_safety_yes:
+                        PostFormRadioData(true,safety_list.get(1).getId(),"saftey_radio_3");
+                        break;
+                    case R.id.fire_safety_no:
+                        PostFormRadioData(false,safety_list.get(1).getId(),"saftey_radio_3");
+                        break;
+                }
+            }
+        });
+        radio_brand_outlet = (RadioGroup) view.findViewById(R.id.radio_fire_safety);
+
+        radio_brand_outlet.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                switch(checkedId) {
+                    case R.id.brand_outlet_yes:
+                        PostFormRadioData(true,transaction_notes_list.get(1).getId(),"transaction_notes_radio");
+                        break;
+                    case R.id.brand_outlet_no:
+                        PostFormRadioData(false,transaction_notes_list.get(1).getId(),"transaction_notes_radio");
+                        break;
+                }
+            }
+        });   ///priyanka
         setOnClick();
 
         suppliers_list = new ArrayList<>();
