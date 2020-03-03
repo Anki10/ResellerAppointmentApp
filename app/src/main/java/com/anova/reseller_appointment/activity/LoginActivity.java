@@ -74,8 +74,8 @@ public class LoginActivity extends AppCompatActivity implements ActivityCompat.O
         // get Internet status
         isInternetPresent = cd.isConnectingToInternet();
 
-        login_userName.setText("testing456@gmail.com");
-        login_password.setText("IoQ1%yIg");
+        login_userName.setText("testasr3@gmaill.com");
+        login_password.setText("Password1");
 
         btn_yes_ok.setOnClickListener(new View.OnClickListener() {
             @Override

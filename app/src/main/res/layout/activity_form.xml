@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -25,7 +24,7 @@
 
                <LinearLayout
                    android:id="@+id/row_ll_physical"
-                   android:layout_width="match_parent"
+                   android:layout_width="384dp"
                    android:layout_height="wrap_content"
                    android:layout_margin="5dp"
                    android:background="@drawable/square_bg"
@@ -59,9 +58,6 @@
                    android:orientation="vertical"
                    android:padding="5dp"
                    android:visibility="gone">
-
-
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -71,7 +67,7 @@
                              android:layout_width="wrap_content"
                              android:layout_height="wrap_content"
                              android:layout_marginTop="10dp"
-                             android:text="Photograph from outside and inside the premises"
+                             android:text="Geotagged Assessment"
                              android:textColor="@color/black"
                              android:textSize="16sp"
                              android:textStyle="bold" />
@@ -80,7 +76,7 @@
                              android:layout_width="wrap_content"
                              android:layout_height="wrap_content"
                              android:layout_marginTop="5dp"
-                             android:text="Note : Pictures from outside, manufactuing site, store house, inventory"
+                             android:text="Note : Photograph from outside and inside the premises"
                              android:textColor="@color/black"
                              android:textSize="16sp" />
                     </LinearLayout>
@@ -170,7 +166,7 @@
                              android:layout_width="wrap_content"
                              android:layout_height="wrap_content"
                              android:layout_marginTop="10dp"
-                             android:text="What is the name of the official taking part in the assessment ?"
+                             android:text="What is the name of the official taking part in the assessment?"
                              android:textColor="@color/black"
                              android:textSize="16sp"
                              android:textStyle="bold" />
@@ -273,7 +269,7 @@
                              android:textColor="@color/black"
                              android:textSize="16sp" />
                     </LinearLayout>
-
+                    <!--p1-->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -298,7 +294,7 @@
                              android:src="@mipmap/sync_data" />
 
                     </LinearLayout>
-
+                    <!--p2-->
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -338,7 +334,7 @@
                </LinearLayout>
 
                <LinearLayout
-                   android:id="@+id/row_ll_process_capability"
+                   android:id="@+id/row_ll_Stores_capability"
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:layout_margin="5dp"
@@ -357,7 +353,7 @@
                         android:textStyle="bold" />
 
                     <ImageView
-                        android:id="@+id/arrow_Process_capability"
+                        android:id="@+id/arrow_Stores_capability"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@mipmap/expandable_down_arrow" />
@@ -365,7 +361,7 @@
                </LinearLayout>
 
                <LinearLayout
-                   android:id="@+id/ll_proess_capability"
+                   android:id="@+id/ll_Stores_capability"
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:layout_margin="5dp"
@@ -373,20 +369,15 @@
                    android:orientation="vertical"
                    android:padding="5dp"
                    android:visibility="gone">
-
-
-
-// 1
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
-
                          <TextView
                              android:layout_width="wrap_content"
                              android:layout_height="wrap_content"
                              android:layout_marginTop="10dp"
-                             android:text="Show the stores physical location with its inward and outwards storage capacity"
+                             android:text="Show the stores physical location with its inward and outwards."
                              android:textColor="@color/black"
                              android:textSize="16sp"
                              android:textStyle="bold" />
@@ -395,9 +386,9 @@
                              android:layout_width="wrap_content"
                              android:layout_height="wrap_content"
                              android:layout_marginTop="5dp"
-                             android:text="Note : Photograph"
+                             android:text="Note :Photograph"
                              android:textColor="@color/black"
-                             android:visibility="visible"
+                             android:visibility="gone"
                              android:textSize="16sp" />
 
                     </LinearLayout>
@@ -417,7 +408,7 @@
                         android:orientation="horizontal">
 
                          <ImageView
-                             android:id="@+id/image_process_capability"
+                             android:id="@+id/image_Stores_capability"
                              android:layout_width="wrap_content"
                              android:layout_height="wrap_content"
                              android:layout_gravity="center"
@@ -427,10 +418,8 @@
 
                     </LinearLayout>
 
-
-
                     <android.support.v7.widget.RecyclerView
-                        android:id="@+id/process_capability_recycler_view"
+                        android:id="@+id/Stores_capabilit_recycler_view"
                         android:layout_width="match_parent"
                         android:visibility="gone"
                         android:layout_height="wrap_content" />
@@ -441,48 +430,6 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:background="@color/colorPrimaryTransparent"></View>
-
-
-               </LinearLayout>
-
-
-               <LinearLayout
-                   android:id="@+id/row_ll_production"
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:layout_margin="5dp"
-                   android:background="@drawable/square_bg"
-                   android:gravity="center"
-                   android:orientation="horizontal"
-                   android:padding="10dp">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Transportation"
-                        android:textColor="@color/black"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <ImageView
-                        android:id="@+id/arrow_Production_Capacity"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@mipmap/expandable_down_arrow" />
-
-               </LinearLayout>
-
-               <LinearLayout
-                   android:id="@+id/ll_production_capability"
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:layout_margin="5dp"
-                   android:background="@drawable/square_white_bg"
-                   android:orientation="vertical"
-                   android:padding="5dp"
-                   android:visibility="gone">
-
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -491,128 +438,21 @@
 
                          <TextView
                              android:layout_width="wrap_content"
-                             android:layout_height="wrap_content"
+                             android:layout_height="77dp"
                              android:layout_marginTop="10dp"
-                             android:text="Show the machines critical for production for the product"
+                             android:text="Show the inventory management system (ABC analysis or any other) "
                              android:textColor="@color/black"
                              android:textSize="16sp"
                              android:textStyle="bold" />
-
-                    </LinearLayout>
-
-                    <android.support.v7.widget.RecyclerView
-                        android:id="@+id/production_capacity_recycler_view"
-                        android:layout_width="match_parent"
-                        android:visibility="gone"
-                        android:layout_height="wrap_content" />
-
-
-
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:background="@color/colorPrimaryTransparent"></View>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:orientation="horizontal">
-
-                         <ImageView
-                             android:id="@+id/image_production_capability"
-                             android:layout_width="wrap_content"
-                             android:layout_height="wrap_content"
-                             android:layout_gravity="center"
-                             android:layout_marginRight="10dp"
-                             android:src="@mipmap/camera" />
-
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:background="@color/colorPrimaryTransparent"></View>
-
-
-               </LinearLayout>
-
-
-               <LinearLayout
-                   android:id="@+id/row_ll_Quality"
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:layout_margin="5dp"
-                   android:background="@drawable/square_bg"
-                   android:gravity="center"
-                   android:orientation="horizontal"
-                   android:padding="10dp">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Safety"
-                        android:textColor="@color/black"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <ImageView
-                        android:id="@+id/arrow_expand_Quality"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@mipmap/expandable_down_arrow" />
-
-               </LinearLayout>
-
-               <LinearLayout
-                   android:id="@+id/ll_Quality"
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:layout_margin="5dp"
-                   android:background="@drawable/square_white_bg"
-                   android:orientation="vertical"
-                   android:padding="5dp"
-                   android:visibility="gone">
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
 
                          <TextView
                              android:layout_width="match_parent"
                              android:layout_height="wrap_content"
-                             android:layout_marginTop="10dp"
-                             android:text="Explain the process for quality assurance? ( Discussion with Quality Manager)"
-                             android:textColor="@color/black"
-                             android:textSize="16sp"
-                             android:textStyle="bold" />
-
-                         <TextView
-                             android:layout_width="wrap_content"
-                             android:layout_height="wrap_content"
                              android:layout_marginTop="5dp"
-                             android:text="Note : Picture of the manager"
+                             android:text="NOTE :Photograph "
                              android:textColor="@color/black"
                              android:textSize="16sp" />
                     </LinearLayout>
-
-
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:background="@color/colorPrimaryTransparent"></View>
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -620,17 +460,19 @@
                         android:orientation="horizontal">
 
                          <ImageView
-                             android:id="@+id/image_Quality"
+                             android:id="@+id/image_inventory_mngmnt"
                              android:layout_width="wrap_content"
                              android:layout_height="wrap_content"
                              android:layout_gravity="center"
                              android:layout_marginRight="10dp"
                              android:src="@mipmap/camera" />
 
+
                     </LinearLayout>
 
+
                     <android.support.v7.widget.RecyclerView
-                        android:id="@+id/Quality_recycler_view"
+                        android:id="@+id/inventory_mngmnt_recycler_view"
                         android:layout_width="match_parent"
                         android:visibility="gone"
                         android:layout_height="wrap_content" />
@@ -639,93 +481,62 @@
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
                         android:background="@color/colorPrimaryTransparent"></View>
 
-
-               </LinearLayout>
-
-
-               <LinearLayout
-                   android:id="@+id/row_ll_suppliers"
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:layout_margin="5dp"
-                   android:background="@drawable/square_bg"
-                   android:gravity="center"
-                   android:orientation="horizontal"
-                   android:padding="10dp">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Suppliers"
-                        android:textColor="@color/black"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <ImageView
-                        android:id="@+id/arrow_expand_Suppliers"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@mipmap/expandable_down_arrow" />
-
-               </LinearLayout>
-
-               <LinearLayout
-                   android:id="@+id/ll_suppliers"
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:layout_margin="5dp"
-                   android:background="@drawable/square_white_bg"
-                   android:orientation="vertical"
-                   android:padding="5dp"
-                   android:visibility="gone">
-
-
+                    <!--3 part-->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
-
                          <TextView
                              android:layout_width="wrap_content"
-                             android:layout_height="wrap_content"
+                             android:layout_height="77dp"
                              android:layout_marginTop="10dp"
-                             android:text="What key aspects are focussed while selecting suppliers?"
+                             android:text="The brand/outlet/s is equipped with computers and appropriate software that can provide real time inventory information ?"
                              android:textColor="@color/black"
                              android:textSize="16sp"
                              android:textStyle="bold" />
+
+                         <TextView
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="5dp"
+                             android:text="NOTE :Photograph "
+                             android:textColor="@color/black"
+                             android:textSize="16sp" />
                     </LinearLayout>
-
-
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:orientation="horizontal">
 
-                         <EditText
-                             android:id="@+id/edit_text_suppliers"
-                             android:layout_width="0dp"
-                             android:layout_weight="1"
-                             android:layout_height="wrap_content"
-                             android:layout_marginTop="10dp" />
-
                          <ImageView
-                             android:id="@+id/sync_suppliers"
+                             android:id="@+id/image_brand_outlet"
                              android:layout_width="wrap_content"
                              android:layout_height="wrap_content"
                              android:layout_gravity="center"
-                             android:padding="5dp"
-                             android:src="@mipmap/sync_data" />
+                             android:layout_marginRight="10dp"
+                             android:src="@mipmap/camera" />
+
 
                     </LinearLayout>
 
-               </LinearLayout>
 
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/brand_outlet_recycler_view"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorPrimaryTransparent"></View>
+               </LinearLayout>
 
                <LinearLayout
                    android:id="@+id/row_ll_Transportation"
@@ -741,7 +552,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Transaction and Accounting"
+                        android:text="Transportation"
                         android:textColor="@color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -763,8 +574,6 @@
                    android:orientation="vertical"
                    android:padding="5dp"
                    android:visibility="gone">
-
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -831,6 +640,407 @@
 
                </LinearLayout>
 
+               <LinearLayout
+                   android:id="@+id/row_ll_safety"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="5dp"
+                   android:background="@drawable/square_bg"
+                   android:gravity="center"
+                   android:orientation="horizontal"
+                   android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Safety"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/arrow_expand_Safety"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/expandable_down_arrow" />
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:id="@+id/ll_safety"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="5dp"
+                   android:background="@drawable/square_white_bg"
+                   android:orientation="vertical"
+                   android:padding="5dp"
+                   android:visibility="gone">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                         <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="10dp"
+                             android:text="Are there any effective signs and labels for safety?"
+                             android:textColor="@color/black"
+                             android:textSize="16sp"
+                             android:textStyle="bold" />
+
+                         <TextView
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="5dp"
+                             android:text="NOTE : Picture of the signage"
+                             android:textColor="@color/black"
+                             android:textSize="16sp" />
+
+
+                         <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                             android:id="@+id/radio_signs_labels"
+                             android:layout_width="fill_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="5dp"
+                             android:orientation="vertical">
+
+                              <RadioButton
+                                  android:id="@+id/signs_labels_yes"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:text="Yes" />
+
+                              <RadioButton
+                                  android:id="@+id/signs_labels_no"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:text="No" />
+                         </RadioGroup>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/colorPrimaryTransparent"></View>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                         <ImageView
+                             android:id="@+id/image_signs_labels"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_gravity="center"
+                             android:layout_marginRight="10dp"
+                             android:src="@mipmap/camera" />
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/signs_labels_recycler_view"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorPrimaryTransparent"></View>
+
+
+                    <!-- safety.2-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                         <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="10dp"
+                             android:text="In-house staff using PPE?"
+                             android:textColor="@color/black"
+                             android:textSize="16sp"
+                             android:textStyle="bold" />
+
+                         <TextView
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="5dp"
+                             android:text="NOTE : Picture of the signage"
+                             android:textColor="@color/black"
+                             android:textSize="16sp" />
+
+
+                         <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                             android:id="@+id/radio_inhouse_ppe"
+                             android:layout_width="fill_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="5dp"
+                             android:orientation="vertical">
+
+                              <RadioButton
+                                  android:id="@+id/inhouse_ppe_yes"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:text="Yes" />
+
+                              <RadioButton
+                                  android:id="@+id/inhouse_ppe_no"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:text="No" />
+                         </RadioGroup>
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/colorPrimaryTransparent"></View>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                         <ImageView
+                             android:id="@+id/image_inhouse_ppe"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_gravity="center"
+                             android:layout_marginRight="10dp"
+                             android:src="@mipmap/camera" />
+
+                    </LinearLayout>
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/inhouse_ppe_recycler_view"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorPrimaryTransparent"></View>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                         <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="10dp"
+                             android:text="Are there any fire extinguisher and other safety equipment in sight?"
+                             android:textColor="@color/black"
+                             android:textSize="16sp"
+                             android:textStyle="bold" />
+
+                         <TextView
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="5dp"
+                             android:text="NOTE : Picture of the equipment"
+                             android:textColor="@color/black"
+                             android:textSize="16sp" />
+
+
+                         <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                             android:id="@+id/radio_fire_safety"
+                             android:layout_width="fill_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="5dp"
+                             android:orientation="vertical">
+
+                              <RadioButton
+                                  android:id="@+id/fire_safety_yes"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:text="Yes" />
+
+                              <RadioButton
+                                  android:id="@+id/fire_safety_no"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:text="No" />
+                         </RadioGroup>
+
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/fire_safety_recycler_view"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/colorPrimaryTransparent"></View>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+
+                         <ImageView
+                             android:id="@+id/image_fire_safety"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_gravity="center"
+                             android:layout_marginRight="10dp"
+                             android:src="@mipmap/camera" />
+
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorPrimaryTransparent"></View>
+               </LinearLayout>
+
+
+               <LinearLayout
+                   android:id="@+id/row_ll_transaction_accounting"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="5dp"
+                   android:background="@drawable/square_bg"
+                   android:gravity="center"
+                   android:orientation="horizontal"
+                   android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Transaction and Accounting"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/arrow_expand_transaction_accounting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/expandable_down_arrow" />
+
+               </LinearLayout>
+
+
+               <!-- <LinearLayout
+                     android:id="@+id/row_ll_additional_image"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_margin="5dp"
+                     android:background="@drawable/square_bg"
+                     android:gravity="center"
+                     android:orientation="horizontal"
+                     android:padding="10dp">
+
+                     <TextView
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content"
+                         android:layout_weight="1"
+                         android:text="Additional Images"
+                         android:textColor="@color/black"
+                         android:textSize="16sp"
+                         android:textStyle="bold" />
+
+                     <ImageView
+                         android:id="@+id/arrow_additional_image"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:src="@mipmap/expandable_down_arrow" />
+
+                 </LinearLayout>
+
+                 <LinearLayout android:id="@+id/ll_additional_image"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:visibility="gone"
+                     android:layout_margin="5dp"
+                     android:padding="5dp"
+                     android:background="@drawable/square_white_bg"
+                     android:orientation="vertical">
+
+                     <TextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginTop="10dp"
+                         android:text="Any other additional images"
+                         android:textColor="@color/black"
+                         android:textSize="16sp"
+                         android:textStyle="bold" />
+
+
+                     <View
+                     android:layout_width="match_parent"
+                     android:layout_height="1dp"
+                     android:layout_marginTop="10dp"
+                     android:layout_marginBottom="10dp"
+                     android:background="@color/colorPrimaryTransparent"></View>
+
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:gravity="center"
+                     android:orientation="horizontal">
+
+                     <ImageView
+                         android:id="@+id/image_additional"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center"
+                         android:layout_marginRight="10dp"
+                         android:src="@mipmap/camera" />
+
+                 </LinearLayout>
+
+
+                 <android.support.v7.widget.RecyclerView
+                     android:id="@+id/development_additional"
+                     android:layout_width="match_parent"
+                     android:visibility="gone"
+                     android:layout_height="wrap_content" />
+
+
+                 <View
+                     android:layout_width="match_parent"
+                     android:layout_height="1dp"
+                     android:layout_marginTop="10dp"
+                     android:background="@color/colorPrimaryTransparent"></View>
+
+             </LinearLayout>-->
           </LinearLayout>
 
      </ScrollView>
@@ -843,8 +1053,8 @@
          android:textColor="@color/white"
          android:layout_gravity="center"
          android:padding="5dp"
-         android:layout_margin="20dp"
          android:visibility="gone"
+         android:layout_margin="20dp"
          android:gravity="center"
          android:background="@color/login_btn"/>
 

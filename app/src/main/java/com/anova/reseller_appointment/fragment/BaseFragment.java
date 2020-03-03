@@ -91,8 +91,6 @@ public class BaseFragment extends Fragment implements EasyPermissions.Permission
         GoogleApiClient.OnConnectionFailedListener,
         LocationListener {
 
-
-
     private final static String TAG = "VideoAssessmentActivity";
 
     private static final int RC_VIDEO_APP_PERM = 124;
