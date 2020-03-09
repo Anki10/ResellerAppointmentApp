@@ -308,17 +308,6 @@ public class FormActivity extends BaseActivity implements ListAdapterListener {
         // Transportation
 
         row_ll_Transportation = (LinearLayout) findViewById(R.id.row_ll_Transportation);
-        ll_tranportation = (LinearLayout) findViewById(R.id.ll_production_capability);
-
-        arrow_expand_Transportation = (ImageView) findViewById(R.id.arrow_Production_Capacity);
-        image_tranportation = (ImageView) findViewById(R.id.image_production_capability);
-
-        // Safety
-
-        row_ll_safety = (LinearLayout) findViewById(R.id.row_ll_Quality);
-        ll_safety = (LinearLayout) findViewById(R.id.ll_Quality);
-
-        arrow_expand_Safety = (ImageView) findViewById(R.id.arrow_expand_Quality);
 
         signs_labels_yes = (RadioButton) findViewById(R.id.signs_labels_yes);
         signs_labels_no = (RadioButton) findViewById(R.id.signs_labels_no);

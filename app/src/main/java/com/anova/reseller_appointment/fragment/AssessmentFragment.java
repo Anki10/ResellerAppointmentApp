@@ -319,17 +319,7 @@ public class AssessmentFragment extends BaseFragment implements ListAdapterListe
         // Transportation
 
         row_ll_Transportation = (LinearLayout) view.findViewById(R.id.row_ll_Transportation);
-        ll_tranportation = (LinearLayout) view.findViewById(R.id.ll_production_capability);
 
-        arrow_expand_Transportation = (ImageView) view.findViewById(R.id.arrow_Production_Capacity);
-        image_tranportation = (ImageView) view.findViewById(R.id.image_production_capability);
-
-        // Safety
-
-        row_ll_safety = (LinearLayout) view.findViewById(R.id.row_ll_Quality);
-        ll_safety = (LinearLayout) view.findViewById(R.id.ll_Quality);
-
-        arrow_expand_Safety = (ImageView) view.findViewById(R.id.arrow_expand_Quality);
 
         signs_labels_yes = (RadioButton) view.findViewById(R.id.signs_labels_yes);
         signs_labels_no = (RadioButton) view.findViewById(R.id.signs_labels_no);
