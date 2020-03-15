@@ -306,6 +306,10 @@ public class AssessmentFragment extends BaseFragment implements ListAdapterListe
         ed_basic_offical = (EditText) view.findViewById(R.id.ed_basic_offical);
         ed_basic_ID_proof = (EditText) view.findViewById(R.id.ed_basic_ID_proof);
 
+        arrow_expand_Transportation = view.findViewById(R.id.arrow_expand_Transportation);
+
+        ll_tranportation = view.findViewById(R.id.ll_tranportation);
+
         // Stores capability
 
         row_ll_Stores_capability = (LinearLayout) view.findViewById(R.id.row_ll_Stores_capability);
@@ -316,7 +320,13 @@ public class AssessmentFragment extends BaseFragment implements ListAdapterListe
         image_inventory_mngmnt = (ImageView) view.findViewById(R.id.image_inventory_mngmnt);
         image_brand_outlet = (ImageView) view.findViewById(R.id.image_brand_outlet);
 
+        row_ll_safety = view.findViewById(R.id.row_ll_safety);
+        ll_safety = view.findViewById(R.id.ll_safety);
+        arrow_expand_Safety = view.findViewById(R.id.arrow_expand_Safety);
+
         // Transportation
+
+        image_tranportation = view.findViewById(R.id.image_tranportation);
 
         row_ll_Transportation = (LinearLayout) view.findViewById(R.id.row_ll_Transportation);
 
@@ -797,19 +807,20 @@ public class AssessmentFragment extends BaseFragment implements ListAdapterListe
             public void onResponse(Call<GetAllFormData> call, Response<GetAllFormData> response) {
                 if (response.body() != null){
                     System.out.println("xxxx");
+                    try {
+                        physical_location_list = response.body().getData().getPhysical_location();
 
+                        basic_info_list = response.body().getData().getBasic_information();
 
-                    physical_location_list = response.body().getData().getPhysical_location();
+                        stores_capability_list = response.body().getData().getStores_capabilit();
 
-                    basic_info_list = response.body().getData().getBasic_information();
+                        transportation_list = response.body().getData().getTransportation();
 
-                    stores_capability_list = response.body().getData().getStores_capabilit();
-
-                    transportation_list = response.body().getData().getTransportation();
-
-                    Safety_list = response.body().getData().getSafety();
-                    Transaction_Accounting_list = response.body().getData().getTransaction_and_Accounting();
-
+                        Safety_list = response.body().getData().getSafety();
+                        Transaction_Accounting_list = response.body().getData().getTransaction_and_Accounting();
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
                 }
             }
 

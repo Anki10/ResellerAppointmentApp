@@ -24,7 +24,7 @@
 
             <LinearLayout
                 android:id="@+id/row_ll_physical"
-                android:layout_width="384dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:background="@drawable/square_bg"
@@ -243,9 +243,6 @@
                     android:layout_height="1dp"
                     android:layout_marginTop="10dp"
                     android:background="@color/colorPrimaryTransparent"></View>
-
-
-
 
                     <LinearLayout
                         android:layout_width="match_parent"

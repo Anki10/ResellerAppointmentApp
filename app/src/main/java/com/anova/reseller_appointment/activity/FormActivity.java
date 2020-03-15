@@ -135,8 +135,6 @@ public class FormActivity extends BaseActivity implements ListAdapterListener {
 
     ImageView image_tranportation;
 
-
-
     //  Safety
 
     LinearLayout row_ll_safety;
@@ -171,12 +169,7 @@ public class FormActivity extends BaseActivity implements ListAdapterListener {
     RecyclerView inhouse_ppe_recycler_view;
     RecyclerView fire_safety_recycler_view;
 
-
-
     private Dialog dialogLogout;
-
-
-    private View view;
 
     private APIService mAPIService;
 
@@ -227,10 +220,6 @@ public class FormActivity extends BaseActivity implements ListAdapterListener {
 
     RadioGroup radio_signs_labels,radio_inhouse_ppe,radio_fire_safety;
 
-
-    TextView tv_video_switch;
-
-
     private RecyclerView.LayoutManager mLayoutManager;
     private ImageShowAdapter physical_image_adapter;
     private ImageShowAdapter basic_info_adapter;
@@ -269,7 +258,6 @@ public class FormActivity extends BaseActivity implements ListAdapterListener {
 
         mAPIService = ApiUtils.getAPIService();
 
-        tv_video_switch = view.findViewById(R.id.tv_video_switch);
 
         // Physical Location
 
@@ -306,6 +294,11 @@ public class FormActivity extends BaseActivity implements ListAdapterListener {
         image_brand_outlet = (ImageView) findViewById(R.id.image_brand_outlet);
 
         // Transportation
+
+        row_ll_safety = findViewById(R.id.row_ll_safety);
+
+
+        image_tranportation = (ImageView) findViewById(R.id.image_tranportation);
 
         row_ll_Transportation = (LinearLayout) findViewById(R.id.row_ll_Transportation);
 
@@ -367,7 +360,7 @@ public class FormActivity extends BaseActivity implements ListAdapterListener {
         image_fire_safety_list = new ArrayList<>();
 
 
-        radio_signs_labels = (RadioGroup) view.findViewById(R.id.radio_signs_labels);
+        radio_signs_labels = (RadioGroup) findViewById(R.id.radio_signs_labels);
 
         radio_signs_labels.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
         {
@@ -385,7 +378,7 @@ public class FormActivity extends BaseActivity implements ListAdapterListener {
             }
         });
 
-        radio_inhouse_ppe = (RadioGroup) view.findViewById(R.id.radio_inhouse_ppe);
+        radio_inhouse_ppe = (RadioGroup) findViewById(R.id.radio_inhouse_ppe);
 
         radio_inhouse_ppe.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -401,7 +394,7 @@ public class FormActivity extends BaseActivity implements ListAdapterListener {
             }
         });
 
-        radio_fire_safety = (RadioGroup) view.findViewById(R.id.radio_fire_safety);
+        radio_fire_safety = (RadioGroup) findViewById(R.id.radio_fire_safety);
 
         radio_fire_safety.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -426,7 +419,7 @@ public class FormActivity extends BaseActivity implements ListAdapterListener {
         Safety_list = new ArrayList<>();
         Transaction_Accounting_list = new ArrayList<>();
 
-        takePictureButton = (Button) view.findViewById(R.id.btn_takepicture);
+        takePictureButton = (Button) findViewById(R.id.btn_takepicture);
         assert takePictureButton != null;
 
         if (getArrayList("physical_list") != null){
@@ -769,18 +762,20 @@ public class FormActivity extends BaseActivity implements ListAdapterListener {
                 if (response.body() != null){
                     System.out.println("xxxx");
 
+                    try {
+                        physical_location_list = response.body().getData().getPhysical_location();
 
-                    physical_location_list = response.body().getData().getPhysical_location();
+                        basic_info_list = response.body().getData().getBasic_information();
 
-                    basic_info_list = response.body().getData().getBasic_information();
+                        stores_capability_list = response.body().getData().getStores_capabilit();
 
-                    stores_capability_list = response.body().getData().getStores_capabilit();
+                        transportation_list = response.body().getData().getTransportation();
 
-                    transportation_list = response.body().getData().getTransportation();
-
-                    Safety_list = response.body().getData().getSafety();
-                    Transaction_Accounting_list = response.body().getData().getTransaction_and_Accounting();
-
+                        Safety_list = response.body().getData().getSafety();
+                        Transaction_Accounting_list = response.body().getData().getTransaction_and_Accounting();
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
                 }
             }
 
